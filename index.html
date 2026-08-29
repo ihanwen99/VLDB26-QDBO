@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
   <div class="aurora aurora-one"></div>
@@ -52,9 +52,9 @@
     </section>
 
     <section id="method" class="content-section section-shell">
-      <div class="section-heading">
+      <div class="section-heading method-heading">
         <span class="section-index">01 / METHOD</span>
-        <h2>One optimization loop.<br>Two database decisions.</h2>
+        <h2><span class="heading-line">One optimization loop.</span><span class="heading-line">Two database decisions.</span></h2>
         <p>QDBO separates database-specific modeling from the shared iterative quantum search.</p>
       </div>
       <div class="method-grid">
@@ -65,9 +65,9 @@
     </section>
 
     <section id="frameworks" class="content-section section-shell frameworks-section">
-      <div class="section-heading compact">
+      <div class="section-heading compact framework-heading">
         <span class="section-index">02 / FRAMEWORKS</span>
-        <h2>See how QDBO fits each use case.</h2>
+        <h2><span class="heading-line">See how QDBO fits</span><span class="heading-line">each use case.</span></h2>
       </div>
       <div class="framework-grid">
         <article class="framework-card">
@@ -97,9 +97,9 @@
     </section>
 
     <section id="reproduce" class="content-section section-shell reproduce-section">
-      <div class="section-heading compact">
+      <div class="section-heading compact reproduce-heading">
         <span class="section-index">03 / REPRODUCE</span>
-        <h2>Start from one clean repository.</h2>
+        <h2><span class="heading-line">Start from one clean repository.</span></h2>
       </div>
       <div class="reproduce-grid">
         <div class="terminal-card">
@@ -108,7 +108,7 @@
 <span class="terminal-muted">$</span> cd VLDB26-QDBO
 <span class="terminal-muted">$</span> python -m venv .venv && source .venv/bin/activate
 <span class="terminal-muted">$</span> pip install -e .
-<span class="terminal-muted">$</span> <span class="terminal-accent">bash algorithm/embedding/build_cpp_embed.sh</span>
+<span class="terminal-muted">$</span> <span class="terminal-accent">bash qdbo/embedding/build_cpp_embed.sh</span>
 <span class="terminal-muted">$</span> cp config.example.env config.env</code></pre>
         </div>
         <div class="reproduce-copy">

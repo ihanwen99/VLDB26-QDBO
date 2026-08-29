@@ -43,6 +43,8 @@ body::before {
 body.lightbox-open { overflow: hidden; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
+h1, h2, h3 { text-wrap: balance; }
+.heading-line { display: block; }
 .section-shell { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
 
 .aurora {
@@ -184,6 +186,12 @@ button { font: inherit; }
 .section-heading h2 { margin: 0; font-size: clamp(2.2rem, 4vw, 3.9rem); line-height: 1.05; letter-spacing: -.045em; font-weight: 650; }
 .section-heading p { margin: 0; color: var(--muted); }
 
+@media (min-width: 981px) {
+  .heading-line { white-space: nowrap; }
+  .method-heading { grid-template-columns: 140px minmax(0, 1fr) 315px; gap: 36px; }
+  .method-heading h2 { font-size: clamp(2.2rem, 3.45vw, 3.35rem); }
+}
+
 .method-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
 .method-card, .framework-card, .terminal-card, .reproduce-copy {
   position: relative;
@@ -201,9 +209,9 @@ button { font: inherit; }
 
 .frameworks-section { border-top: 1px solid var(--line); }
 .framework-grid { display: grid; gap: 22px; }
-.framework-card { display: grid; grid-template-columns: .38fr .62fr; gap: 30px; align-items: center; padding: 28px; }
+.framework-card { display: grid; grid-template-columns: .42fr .58fr; gap: 30px; align-items: center; padding: 28px; }
 .framework-copy { padding: 8px 6px 8px 8px; }
-.framework-copy h3 { margin: 20px 0 14px; font-size: clamp(1.8rem, 3vw, 2.8rem); line-height: 1.08; letter-spacing: -.035em; }
+.framework-copy h3 { margin: 20px 0 14px; font-size: clamp(1.8rem, 2.7vw, 2.55rem); line-height: 1.08; letter-spacing: -.035em; }
 .framework-copy p { margin: 0; color: var(--muted); }
 .figure-button {
   position: relative;
