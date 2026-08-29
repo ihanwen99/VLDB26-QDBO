@@ -1,22 +1,36 @@
-const copyButton = document.querySelector("#copy-citation");
-const citation = document.querySelector("#bibtex code");
+const lightbox = document.querySelector("#lightbox");
+const lightboxImage = document.querySelector("#lightbox-image");
+const figureButtons = document.querySelectorAll("[data-lightbox-src]");
+const closeButtons = document.querySelectorAll("[data-lightbox-close]");
+let lastTrigger = null;
 
-if (copyButton && citation) {
-  copyButton.addEventListener("click", async () => {
-    const originalLabel = copyButton.textContent;
-    try {
-      await navigator.clipboard.writeText(citation.textContent);
-      copyButton.textContent = "Copied";
-    } catch (error) {
-      const range = document.createRange();
-      range.selectNodeContents(citation);
-      const selection = window.getSelection();
-      selection.removeAllRanges();
-      selection.addRange(range);
-      copyButton.textContent = "Selected";
-    }
-    window.setTimeout(() => {
-      copyButton.textContent = originalLabel;
-    }, 1600);
-  });
+function openLightbox(button) {
+  if (!lightbox || !lightboxImage) return;
+  lastTrigger = button;
+  lightboxImage.src = button.dataset.lightboxSrc;
+  lightboxImage.alt = button.dataset.lightboxAlt || "QDBO framework";
+  lightbox.hidden = false;
+  document.body.classList.add("lightbox-open");
+  const closeButton = lightbox.querySelector(".lightbox-close");
+  if (closeButton) closeButton.focus();
 }
+
+function closeLightbox() {
+  if (!lightbox || !lightboxImage) return;
+  lightbox.hidden = true;
+  lightboxImage.src = "";
+  document.body.classList.remove("lightbox-open");
+  if (lastTrigger) lastTrigger.focus();
+}
+
+figureButtons.forEach((button) => {
+  button.addEventListener("click", () => openLightbox(button));
+});
+
+closeButtons.forEach((button) => {
+  button.addEventListener("click", closeLightbox);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && lightbox && !lightbox.hidden) closeLightbox();
+});

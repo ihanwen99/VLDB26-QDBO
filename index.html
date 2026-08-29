@@ -3,136 +3,95 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="QDBO is a real-time quantum-augmented database system optimizer for join ordering and index selection.">
-  <meta name="theme-color" content="#07111f">
-  <link rel="canonical" href="https://ihanwen99.github.io/VLDB26-QDBO/">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="QDBO is an iterative quantum-augmented optimizer for database join ordering and index selection.">
   <title>QDBO | Quantum-augmented Database Optimization</title>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareSourceCode",
-    "name": "QDBO",
-    "description": "A real-time quantum-augmented database system optimizer for join ordering and index selection.",
-    "codeRepository": "https://github.com/ihanwen99/VLDB26-QDBO/tree/revision",
-    "license": "https://spdx.org/licenses/GPL-3.0-or-later.html",
-    "programmingLanguage": ["Python", "C++"],
-    "citation": "https://doi.org/10.14778/3836663.3836712"
-  }
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
-  <div class="aurora aurora-one" aria-hidden="true"></div>
-  <div class="aurora aurora-two" aria-hidden="true"></div>
+  <div class="aurora aurora-one"></div>
+  <div class="aurora aurora-two"></div>
 
   <header class="site-header">
     <a class="brand" href="#top" aria-label="QDBO home">
-      <span class="brand-mark" aria-hidden="true">Q</span>
+      <span class="brand-mark">Q</span>
       <span>QDBO</span>
     </a>
     <nav aria-label="Primary navigation">
       <a href="#method">Method</a>
-      <a href="#use-cases">Use Cases</a>
+      <a href="#frameworks">Frameworks</a>
       <a href="#reproduce">Reproduce</a>
-      <a href="#citation">Citation</a>
     </nav>
-    <a class="button button-small button-ghost" href="https://github.com/ihanwen99/VLDB26-QDBO/tree/revision">GitHub</a>
+    <a class="button button-small button-ghost" href="https://github.com/ihanwen99/VLDB26-QDBO">GitHub <span aria-hidden="true">↗</span></a>
   </header>
 
   <main id="top">
     <section class="hero section-shell">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="pulse"></span> PVLDB 2026</div>
-        <h1>Database optimization,<br><span class="gradient-text">augmented by quantum.</span></h1>
-        <p class="hero-lead">QDBO is a real-time framework that maps database decisions to QUBO, runs quantum-annealing-based optimization, and feeds solution quality back into the next iteration.</p>
+        <span class="eyebrow"><span class="pulse"></span>VLDB 2026</span>
+        <h1>Database Optimization,<br><span class="gradient-text">Augmented by Quantum.</span></h1>
+        <p class="hero-lead">QDBO turns database optimization problems into QUBOs, maps them to quantum hardware, and iteratively refines the search. The same method powers join ordering and index selection.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="https://doi.org/10.14778/3836663.3836712">Read the paper <span aria-hidden="true">↗</span></a>
-          <a class="button button-secondary" href="https://github.com/ihanwen99/VLDB26-QDBO/tree/revision#quick-start">Reproduce <span aria-hidden="true">→</span></a>
+          <a class="button button-primary" href="https://github.com/ihanwen99/VLDB26-QDBO">Explore the code <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="https://doi.org/10.14778/3836663.3836712">Read the paper</a>
         </div>
-        <div class="hero-meta">
-          <span>Join Ordering</span><i></i><span>Index Selection</span><i></i><span>Open Source</span>
-        </div>
+        <div class="hero-meta"><span>Join Ordering</span><i></i><span>Index Selection</span><i></i><span>Iterative QDBO</span></div>
       </div>
 
-      <div class="hero-visual" aria-label="QDBO optimization loop diagram">
+      <div class="hero-visual" aria-label="QDBO optimization loop illustration">
         <div class="orbit orbit-one"></div>
         <div class="orbit orbit-two"></div>
-        <div class="core-node">
-          <span class="core-kicker">ITERATIVE CORE</span>
-          <strong>QDBO</strong>
-          <small>feedback-guided QUBO optimization</small>
-        </div>
-        <div class="satellite satellite-db"><span>01</span>DB problem</div>
-        <div class="satellite satellite-qubo"><span>02</span>QUBO mapping</div>
-        <div class="satellite satellite-qpu"><span>03</span>Quantum solve</div>
-        <div class="satellite satellite-feedback"><span>04</span>Feedback</div>
+        <div class="core-node"><span class="core-kicker">OPTIMIZATION CORE</span><strong>QDBO</strong><small>encode · sample · refine</small></div>
+        <div class="satellite satellite-db"><span>01</span>Database problem</div>
+        <div class="satellite satellite-qubo"><span>02</span>QUBO model</div>
+        <div class="satellite satellite-qpu"><span>03</span>Quantum samples</div>
+        <div class="satellite satellite-feedback"><span>04</span>Iterative update</div>
       </div>
-    </section>
-
-    <section class="proof-strip" aria-label="Project facts">
-      <div><strong>2</strong><span>end-to-end use cases</span></div>
-      <div><strong>Python + C++</strong><span>readable and performance paths</span></div>
-      <div><strong>GPL-3.0</strong><span>open-source implementation</span></div>
-      <div><strong>PVLDB 19</strong><span>pages 3606–3620</span></div>
     </section>
 
     <section id="method" class="content-section section-shell">
       <div class="section-heading">
         <span class="section-index">01 / METHOD</span>
-        <h2>A closed loop between database structure and quantum search.</h2>
-        <p>QDBO keeps the optimization objective visible while iteratively adapting the quantum problem representation.</p>
+        <h2>One optimization loop.<br>Two database decisions.</h2>
+        <p>QDBO separates database-specific modeling from the shared iterative quantum search.</p>
       </div>
       <div class="method-grid">
-        <article class="method-card">
-          <span class="card-number">01</span>
-          <h3>Formulate</h3>
-          <p>Translate join-order or index-selection decisions into a QUBO representation.</p>
-        </article>
-        <article class="method-card">
-          <span class="card-number">02</span>
-          <h3>Map</h3>
-          <p>Place logical variables on available quantum hardware using explicit embedding strategies.</p>
-        </article>
-        <article class="method-card">
-          <span class="card-number">03</span>
-          <h3>Solve</h3>
-          <p>Sample solutions through D-Wave Leap and evaluate them against the database objective.</p>
-        </article>
-        <article class="method-card accent-card">
-          <span class="card-number">04</span>
-          <h3>Refine</h3>
-          <p>Feed solution quality back into the next iteration instead of treating the QPU as a black box.</p>
-        </article>
+        <article class="method-card"><span class="card-number">01</span><h3>Encode</h3><p>Translate database costs and constraints into a binary quadratic model.</p></article>
+        <article class="method-card accent-card"><span class="card-number">02</span><h3>Map & sample</h3><p>Embed the model on available hardware and collect quantum samples.</p></article>
+        <article class="method-card"><span class="card-number">03</span><h3>Refine</h3><p>Use sample statistics to update the model and improve the next search step.</p></article>
       </div>
     </section>
 
-    <section id="use-cases" class="content-section section-shell">
+    <section id="frameworks" class="content-section section-shell frameworks-section">
       <div class="section-heading compact">
-        <span class="section-index">02 / USE CASES</span>
-        <h2>One core, two database optimizers.</h2>
+        <span class="section-index">02 / FRAMEWORKS</span>
+        <h2>See how QDBO fits each use case.</h2>
       </div>
-      <div class="use-case-grid">
-        <article class="use-case-card jo-card">
-          <div class="use-case-topline"><span>Q²O-QDBO</span><span class="status-pill">JOIN ORDERING</span></div>
-          <h3>Search better join plans.</h3>
-          <p>Run QDBO across JOB, CEB, and synthetic join graphs, with cost-model evaluation and optional PostgreSQL execution using <code>pg_hint_plan</code>.</p>
-          <ul>
-            <li>JOB and CEB workload inputs</li>
-            <li>NL, CQM, BQM, and iterative solver paths</li>
-            <li>Optional real execution measurements</li>
-          </ul>
-          <a href="https://github.com/ihanwen99/VLDB26-QDBO/tree/revision#use-case-1-join-ordering">Open Join Ordering guide <span aria-hidden="true">→</span></a>
+      <div class="framework-grid">
+        <article class="framework-card">
+          <div class="framework-copy">
+            <span class="framework-label">Q²O-QDBO · JOIN ORDERING</span>
+            <h3>From query graph to executable join plan.</h3>
+            <p>Q²O-QDBO builds a join-ordering QUBO, runs the iterative quantum search, and decodes the result into a PostgreSQL-compatible plan.</p>
+          </div>
+          <button class="figure-button" type="button" data-lightbox-src="assets/q2o-qdbo-framework.webp" data-lightbox-alt="Q²O-QDBO join-ordering framework">
+            <img src="assets/q2o-qdbo-framework.webp" alt="Q²O-QDBO join-ordering framework" loading="lazy">
+            <span>Click to enlarge <b aria-hidden="true">↗</b></span>
+          </button>
         </article>
-        <article class="use-case-card is-card">
-          <div class="use-case-topline"><span>IS-QDBO</span><span class="status-pill">INDEX SELECTION</span></div>
-          <h3>Select indexes under budget.</h3>
-          <p>Build and solve a budget-constrained index-selection QUBO over the paper's strict no-primary-key TPC-H setup.</p>
-          <ul>
-            <li>Tracked immutable paper inputs</li>
-            <li>Classical, hybrid, and iterative solvers</li>
-            <li>Replay and aggregate-table pipeline</li>
-          </ul>
-          <a href="https://github.com/ihanwen99/VLDB26-QDBO/tree/revision#use-case-2-index-selection">Open Index Selection guide <span aria-hidden="true">→</span></a>
+
+        <article class="framework-card">
+          <div class="framework-copy">
+            <span class="framework-label">IS-QDBO · INDEX SELECTION</span>
+            <h3>From workload evidence to a budgeted index set.</h3>
+            <p>IS-QDBO models index benefit and storage cost as a constrained QUBO, then returns a set that can be replayed against PostgreSQL.</p>
+          </div>
+          <button class="figure-button figure-button-short" type="button" data-lightbox-src="assets/is-qdbo-framework.webp" data-lightbox-alt="IS-QDBO index-selection framework">
+            <img src="assets/is-qdbo-framework.webp" alt="IS-QDBO index-selection framework" loading="lazy">
+            <span>Click to enlarge <b aria-hidden="true">↗</b></span>
+          </button>
         </article>
       </div>
     </section>
@@ -140,59 +99,43 @@
     <section id="reproduce" class="content-section section-shell reproduce-section">
       <div class="section-heading compact">
         <span class="section-index">03 / REPRODUCE</span>
-        <h2>A portable source release with explicit external requirements.</h2>
+        <h2>Start from one clean repository.</h2>
       </div>
       <div class="reproduce-grid">
         <div class="terminal-card">
           <div class="terminal-bar"><span></span><span></span><span></span><em>quick-start.sh</em></div>
-          <pre><code><span class="terminal-muted">$</span> git clone --branch revision https://github.com/ihanwen99/VLDB26-QDBO.git
+          <pre><code><span class="terminal-muted">$</span> git clone https://github.com/ihanwen99/VLDB26-QDBO.git
 <span class="terminal-muted">$</span> cd VLDB26-QDBO
+<span class="terminal-muted">$</span> python -m venv .venv && source .venv/bin/activate
 <span class="terminal-muted">$</span> pip install -e .
-<span class="terminal-muted">$</span> <span class="terminal-accent">bash algorithm/embedding/build_cpp_embed.sh</span></code></pre>
+<span class="terminal-muted">$</span> <span class="terminal-accent">bash algorithm/embedding/build_cpp_embed.sh</span>
+<span class="terminal-muted">$</span> cp config.example.env config.env</code></pre>
         </div>
-        <div class="requirements-card">
-          <div class="requirement-row"><span class="requirement-icon ready">✓</span><div><strong>Source and inputs</strong><small>Included in the repository</small></div></div>
-          <div class="requirement-row"><span class="requirement-icon">Q</span><div><strong>Quantum execution</strong><small>D-Wave Leap account and quota</small></div></div>
-          <div class="requirement-row"><span class="requirement-icon">DB</span><div><strong>Runtime experiments</strong><small>PostgreSQL plus workload data</small></div></div>
-          <div class="requirement-row"><span class="requirement-icon">C++</span><div><strong>Embedding library</strong><small>C++17 compiler; built locally</small></div></div>
-          <a class="text-link" href="https://github.com/ihanwen99/VLDB26-QDBO/tree/revision#quick-start">Read the complete reproduction guide <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="citation" class="content-section section-shell citation-section">
-      <div class="citation-copy">
-        <span class="section-index">04 / CITATION</span>
-        <h2>Build on QDBO.</h2>
-        <p>If this project supports your research, please cite the PVLDB paper.</p>
-        <div class="author-list">Hanwen Liu · Abhishek Kumar · Federico Spedalieri · Ibrahim Sabek</div>
-        <div class="citation-actions">
-          <a class="button button-primary" href="https://doi.org/10.14778/3836663.3836712">DOI: 10.14778/3836663.3836712</a>
-          <button class="button button-secondary" id="copy-citation" type="button">Copy BibTeX</button>
+        <div class="reproduce-copy">
+          <h3>Code, build source, workloads, and paper inputs are included.</h3>
+          <p>Configure D-Wave Leap for quantum runs. Add PostgreSQL and workload data only when reproducing measured database execution. Generated results stay outside Git.</p>
+          <a class="text-link" href="https://github.com/ihanwen99/VLDB26-QDBO#quick-start">Open the reproduction guide <span aria-hidden="true">→</span></a>
         </div>
       </div>
-      <pre class="bibtex" id="bibtex"><code>@article{liu2026qdbo,
-  author  = {Liu, Hanwen and Kumar, Abhishek and
-             Spedalieri, Federico and Sabek, Ibrahim},
-  title   = {QDBO: A Real-time Quantum-augmented
-             Database System Optimizer},
-  journal = {Proceedings of the VLDB Endowment},
-  volume  = {19}, number = {11},
-  pages   = {3606--3620}, year = {2026},
-  doi     = {10.14778/3836663.3836712}
-}</code></pre>
     </section>
   </main>
 
   <footer>
-    <div><strong>QDBO</strong><span>Quantum-augmented database optimization</span></div>
+    <div><strong>QDBO</strong><span>Quantum-augmented Database Optimization</span></div>
     <div class="footer-links">
-      <a href="https://github.com/ihanwen99/VLDB26-QDBO/tree/revision">Source</a>
+      <a href="https://github.com/ihanwen99/VLDB26-QDBO">Source</a>
       <a href="https://doi.org/10.14778/3836663.3836712">Paper</a>
-      <a href="https://github.com/ihanwen99/VLDB26-QDBO/blob/revision/LICENSE">GPL-3.0-or-later</a>
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Framework figure">
+    <button class="lightbox-backdrop" type="button" data-lightbox-close aria-label="Close figure"></button>
+    <div class="lightbox-panel">
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close figure">×</button>
+      <img id="lightbox-image" src="" alt="">
+    </div>
+  </div>
+
+  <script src="app.js?v=4"></script>
 </body>
 </html>
