@@ -1,0 +1,3 @@
+Q12 run1: 2598ms ok
+Q12 run2: 2591ms ok
+Q12 run3: 2600ms ok

@@ -1,0 +1,3 @@
+Q19 run1: 2060ms ok
+Q19 run2: 2065ms ok
+Q19 run3: 2053ms ok

@@ -1,0 +1,3 @@
+Q15 run1: 1566ms ok
+Q15 run2: 1570ms ok
+Q15 run3: 1581ms ok

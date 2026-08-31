@@ -1,0 +1,1452 @@
+[
+  {
+    "candidate_id": 0,
+    "name": "qdbo_tpch_idx_public_lineitem_l_orderkey_c3a8af3c",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_orderkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_orderkey_c3a8af3c\" ON \"public\".\"lineitem\" USING btree (\"l_orderkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 1,
+    "name": "qdbo_tpch_idx_public_lineitem_l_quantity_fec0a01a",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_quantity"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_quantity_fec0a01a\" ON \"public\".\"lineitem\" USING btree (\"l_quantity\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 2,
+    "name": "qdbo_tpch_idx_public_lineitem_l_shipdate_b6603ce9",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_shipdate"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_shipdate_b6603ce9\" ON \"public\".\"lineitem\" USING btree (\"l_shipdate\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 3,
+    "name": "qdbo_tpch_idx_public_lineitem_l_receiptdate_f4fb2e9e",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_receiptdate"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_receiptdate_f4fb2e9e\" ON \"public\".\"lineitem\" USING btree (\"l_receiptdate\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 4,
+    "name": "qdbo_tpch_idx_public_lineitem_l_suppkey_e0d33ff9",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_suppkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_suppkey_e0d33ff9\" ON \"public\".\"lineitem\" USING btree (\"l_suppkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 5,
+    "name": "qdbo_tpch_idx_public_lineitem_l_commitdate_99d081cb",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_commitdate"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_commitdate_99d081cb\" ON \"public\".\"lineitem\" USING btree (\"l_commitdate\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 6,
+    "name": "qdbo_tpch_idx_public_lineitem_l_shipmode_f5b0bef5",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_shipmode"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_shipmode_f5b0bef5\" ON \"public\".\"lineitem\" USING btree (\"l_shipmode\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 7,
+    "name": "qdbo_tpch_idx_public_lineitem_l_partkey_a38862ed",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_partkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_partkey_a38862ed\" ON \"public\".\"lineitem\" USING btree (\"l_partkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 8,
+    "name": "qdbo_tpch_idx_public_lineitem_l_shipinstruct_3f998fc9",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_shipinstruct"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_shipinstruct_3f998fc9\" ON \"public\".\"lineitem\" USING btree (\"l_shipinstruct\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 9,
+    "name": "qdbo_tpch_idx_public_lineitem_l_returnflag_732827aa",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_returnflag"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_returnflag_732827aa\" ON \"public\".\"lineitem\" USING btree (\"l_returnflag\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 10,
+    "name": "qdbo_tpch_idx_public_lineitem_l_linestatus_ba16b40f",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_linestatus"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_linestatus_ba16b40f\" ON \"public\".\"lineitem\" USING btree (\"l_linestatus\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 11,
+    "name": "qdbo_tpch_idx_public_lineitem_l_discount_885119dc",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_discount"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_discount_885119dc\" ON \"public\".\"lineitem\" USING btree (\"l_discount\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 12,
+    "name": "qdbo_tpch_idx_public_lineitem_l_orderkey_l_quantity_f8166a99",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_orderkey",
+      "l_quantity"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_orderkey_l_quantity_f8166a99\" ON \"public\".\"lineitem\" USING btree (\"l_orderkey\", \"l_quantity\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 13,
+    "name": "qdbo_tpch_idx_public_lineitem_l_quantity_l_shipdate_3c370ad4",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_quantity",
+      "l_shipdate"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_quantity_l_shipdate_3c370ad4\" ON \"public\".\"lineitem\" USING btree (\"l_quantity\", \"l_shipdate\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 14,
+    "name": "qdbo_tpch_idx_public_lineitem_l_shipdate_l_receiptdate_9088b",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_shipdate",
+      "l_receiptdate"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_shipdate_l_receiptdate_9088b\" ON \"public\".\"lineitem\" USING btree (\"l_shipdate\", \"l_receiptdate\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 15,
+    "name": "qdbo_tpch_idx_public_lineitem_l_receiptdate_l_suppkey_112aaa",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_receiptdate",
+      "l_suppkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_receiptdate_l_suppkey_112aaa\" ON \"public\".\"lineitem\" USING btree (\"l_receiptdate\", \"l_suppkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 16,
+    "name": "qdbo_tpch_idx_public_lineitem_l_suppkey_l_commitdate_6008c60",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_suppkey",
+      "l_commitdate"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_suppkey_l_commitdate_6008c60\" ON \"public\".\"lineitem\" USING btree (\"l_suppkey\", \"l_commitdate\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 17,
+    "name": "qdbo_tpch_idx_public_lineitem_l_commitdate_l_shipmode_02f3fa",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_commitdate",
+      "l_shipmode"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_commitdate_l_shipmode_02f3fa\" ON \"public\".\"lineitem\" USING btree (\"l_commitdate\", \"l_shipmode\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 18,
+    "name": "qdbo_tpch_idx_public_lineitem_l_shipmode_l_partkey_54ceea01",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_shipmode",
+      "l_partkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_shipmode_l_partkey_54ceea01\" ON \"public\".\"lineitem\" USING btree (\"l_shipmode\", \"l_partkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 19,
+    "name": "qdbo_tpch_idx_public_lineitem_l_partkey_l_shipinstruct_17417",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_partkey",
+      "l_shipinstruct"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_partkey_l_shipinstruct_17417\" ON \"public\".\"lineitem\" USING btree (\"l_partkey\", \"l_shipinstruct\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 20,
+    "name": "qdbo_tpch_idx_public_lineitem_l_shipinstruct_l_returnflag_bb",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_shipinstruct",
+      "l_returnflag"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_shipinstruct_l_returnflag_bb\" ON \"public\".\"lineitem\" USING btree (\"l_shipinstruct\", \"l_returnflag\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 21,
+    "name": "qdbo_tpch_idx_public_lineitem_l_returnflag_l_linestatus_0a44",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_returnflag",
+      "l_linestatus"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_returnflag_l_linestatus_0a44\" ON \"public\".\"lineitem\" USING btree (\"l_returnflag\", \"l_linestatus\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 22,
+    "name": "qdbo_tpch_idx_public_lineitem_l_linestatus_l_discount_8d7778",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_linestatus",
+      "l_discount"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_linestatus_l_discount_8d7778\" ON \"public\".\"lineitem\" USING btree (\"l_linestatus\", \"l_discount\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 23,
+    "name": "qdbo_tpch_idx_public_lineitem_l_orderkey_l_quantity_l_shipda",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_orderkey",
+      "l_quantity",
+      "l_shipdate"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_orderkey_l_quantity_l_shipda\" ON \"public\".\"lineitem\" USING btree (\"l_orderkey\", \"l_quantity\", \"l_shipdate\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 24,
+    "name": "qdbo_tpch_idx_public_lineitem_l_quantity_l_shipdate_l_receip",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_quantity",
+      "l_shipdate",
+      "l_receiptdate"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_quantity_l_shipdate_l_receip\" ON \"public\".\"lineitem\" USING btree (\"l_quantity\", \"l_shipdate\", \"l_receiptdate\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 25,
+    "name": "qdbo_tpch_idx_public_lineitem_l_shipdate_l_receiptdate_l_sup",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_shipdate",
+      "l_receiptdate",
+      "l_suppkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_shipdate_l_receiptdate_l_sup\" ON \"public\".\"lineitem\" USING btree (\"l_shipdate\", \"l_receiptdate\", \"l_suppkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 26,
+    "name": "qdbo_tpch_idx_public_lineitem_l_receiptdate_l_suppkey_l_comm",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_receiptdate",
+      "l_suppkey",
+      "l_commitdate"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_receiptdate_l_suppkey_l_comm\" ON \"public\".\"lineitem\" USING btree (\"l_receiptdate\", \"l_suppkey\", \"l_commitdate\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 27,
+    "name": "qdbo_tpch_idx_public_lineitem_l_suppkey_l_commitdate_l_shipm",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_suppkey",
+      "l_commitdate",
+      "l_shipmode"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_suppkey_l_commitdate_l_shipm\" ON \"public\".\"lineitem\" USING btree (\"l_suppkey\", \"l_commitdate\", \"l_shipmode\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 28,
+    "name": "qdbo_tpch_idx_public_lineitem_l_commitdate_l_shipmode_l_part",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_commitdate",
+      "l_shipmode",
+      "l_partkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_commitdate_l_shipmode_l_part\" ON \"public\".\"lineitem\" USING btree (\"l_commitdate\", \"l_shipmode\", \"l_partkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 29,
+    "name": "qdbo_tpch_idx_public_lineitem_l_shipmode_l_partkey_l_shipins",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_shipmode",
+      "l_partkey",
+      "l_shipinstruct"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_shipmode_l_partkey_l_shipins\" ON \"public\".\"lineitem\" USING btree (\"l_shipmode\", \"l_partkey\", \"l_shipinstruct\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 30,
+    "name": "qdbo_tpch_idx_public_lineitem_l_partkey_l_shipinstruct_l_ret",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_partkey",
+      "l_shipinstruct",
+      "l_returnflag"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_partkey_l_shipinstruct_l_ret\" ON \"public\".\"lineitem\" USING btree (\"l_partkey\", \"l_shipinstruct\", \"l_returnflag\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 31,
+    "name": "qdbo_tpch_idx_public_lineitem_l_shipinstruct_l_returnflag_l_",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_shipinstruct",
+      "l_returnflag",
+      "l_linestatus"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_shipinstruct_l_returnflag_l_\" ON \"public\".\"lineitem\" USING btree (\"l_shipinstruct\", \"l_returnflag\", \"l_linestatus\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 32,
+    "name": "qdbo_tpch_idx_public_lineitem_l_returnflag_l_linestatus_l_di",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_returnflag",
+      "l_linestatus",
+      "l_discount"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_returnflag_l_linestatus_l_di\" ON \"public\".\"lineitem\" USING btree (\"l_returnflag\", \"l_linestatus\", \"l_discount\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 33,
+    "name": "qdbo_tpch_idx_public_orders_o_orderdate_93136a41",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_orderdate"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_orderdate_93136a41\" ON \"public\".\"orders\" USING btree (\"o_orderdate\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 34,
+    "name": "qdbo_tpch_idx_public_orders_o_orderkey_052c8637",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_orderkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_orderkey_052c8637\" ON \"public\".\"orders\" USING btree (\"o_orderkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 35,
+    "name": "qdbo_tpch_idx_public_orders_o_custkey_b5768fba",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_custkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_custkey_b5768fba\" ON \"public\".\"orders\" USING btree (\"o_custkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 36,
+    "name": "qdbo_tpch_idx_public_orders_o_orderpriority_313b1662",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_orderpriority"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_orderpriority_313b1662\" ON \"public\".\"orders\" USING btree (\"o_orderpriority\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 37,
+    "name": "qdbo_tpch_idx_public_orders_o_comment_9e9fd127",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_comment"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_comment_9e9fd127\" ON \"public\".\"orders\" USING btree (\"o_comment\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 38,
+    "name": "qdbo_tpch_idx_public_orders_o_totalprice_d68153d1",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_totalprice"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_totalprice_d68153d1\" ON \"public\".\"orders\" USING btree (\"o_totalprice\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 39,
+    "name": "qdbo_tpch_idx_public_orders_o_orderstatus_0ec3d237",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_orderstatus"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_orderstatus_0ec3d237\" ON \"public\".\"orders\" USING btree (\"o_orderstatus\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 40,
+    "name": "qdbo_tpch_idx_public_orders_o_orderdate_o_orderkey_564d0e90",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_orderdate",
+      "o_orderkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_orderdate_o_orderkey_564d0e90\" ON \"public\".\"orders\" USING btree (\"o_orderdate\", \"o_orderkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 41,
+    "name": "qdbo_tpch_idx_public_orders_o_orderkey_o_custkey_8015effa",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_orderkey",
+      "o_custkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_orderkey_o_custkey_8015effa\" ON \"public\".\"orders\" USING btree (\"o_orderkey\", \"o_custkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 42,
+    "name": "qdbo_tpch_idx_public_orders_o_custkey_o_orderpriority_8a2634",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_custkey",
+      "o_orderpriority"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_custkey_o_orderpriority_8a2634\" ON \"public\".\"orders\" USING btree (\"o_custkey\", \"o_orderpriority\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 43,
+    "name": "qdbo_tpch_idx_public_orders_o_orderpriority_o_comment_547a02",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_orderpriority",
+      "o_comment"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_orderpriority_o_comment_547a02\" ON \"public\".\"orders\" USING btree (\"o_orderpriority\", \"o_comment\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 44,
+    "name": "qdbo_tpch_idx_public_orders_o_comment_o_totalprice_e383a5dc",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_comment",
+      "o_totalprice"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_comment_o_totalprice_e383a5dc\" ON \"public\".\"orders\" USING btree (\"o_comment\", \"o_totalprice\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 45,
+    "name": "qdbo_tpch_idx_public_orders_o_totalprice_o_orderstatus_5c0cd",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_totalprice",
+      "o_orderstatus"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_totalprice_o_orderstatus_5c0cd\" ON \"public\".\"orders\" USING btree (\"o_totalprice\", \"o_orderstatus\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 46,
+    "name": "qdbo_tpch_idx_public_orders_o_orderdate_o_orderkey_o_custkey",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_orderdate",
+      "o_orderkey",
+      "o_custkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_orderdate_o_orderkey_o_custkey\" ON \"public\".\"orders\" USING btree (\"o_orderdate\", \"o_orderkey\", \"o_custkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 47,
+    "name": "qdbo_tpch_idx_public_orders_o_orderkey_o_custkey_o_orderprio",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_orderkey",
+      "o_custkey",
+      "o_orderpriority"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_orderkey_o_custkey_o_orderprio\" ON \"public\".\"orders\" USING btree (\"o_orderkey\", \"o_custkey\", \"o_orderpriority\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 48,
+    "name": "qdbo_tpch_idx_public_orders_o_custkey_o_orderpriority_o_comm",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_custkey",
+      "o_orderpriority",
+      "o_comment"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_custkey_o_orderpriority_o_comm\" ON \"public\".\"orders\" USING btree (\"o_custkey\", \"o_orderpriority\", \"o_comment\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 49,
+    "name": "qdbo_tpch_idx_public_orders_o_orderpriority_o_comment_o_tota",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_orderpriority",
+      "o_comment",
+      "o_totalprice"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_orderpriority_o_comment_o_tota\" ON \"public\".\"orders\" USING btree (\"o_orderpriority\", \"o_comment\", \"o_totalprice\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 50,
+    "name": "qdbo_tpch_idx_public_orders_o_comment_o_totalprice_o_orderst",
+    "schema": "public",
+    "table": "orders",
+    "columns": [
+      "o_comment",
+      "o_totalprice",
+      "o_orderstatus"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_orders_o_comment_o_totalprice_o_orderst\" ON \"public\".\"orders\" USING btree (\"o_comment\", \"o_totalprice\", \"o_orderstatus\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 51,
+    "name": "qdbo_tpch_idx_public_part_p_partkey_479a6207",
+    "schema": "public",
+    "table": "part",
+    "columns": [
+      "p_partkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_part_p_partkey_479a6207\" ON \"public\".\"part\" USING btree (\"p_partkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 52,
+    "name": "qdbo_tpch_idx_public_part_p_size_f96917a5",
+    "schema": "public",
+    "table": "part",
+    "columns": [
+      "p_size"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_part_p_size_f96917a5\" ON \"public\".\"part\" USING btree (\"p_size\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 53,
+    "name": "qdbo_tpch_idx_public_part_p_brand_d8fdd58c",
+    "schema": "public",
+    "table": "part",
+    "columns": [
+      "p_brand"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_part_p_brand_d8fdd58c\" ON \"public\".\"part\" USING btree (\"p_brand\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 54,
+    "name": "qdbo_tpch_idx_public_part_p_container_05ae58f1",
+    "schema": "public",
+    "table": "part",
+    "columns": [
+      "p_container"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_part_p_container_05ae58f1\" ON \"public\".\"part\" USING btree (\"p_container\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 55,
+    "name": "qdbo_tpch_idx_public_part_p_type_abe75732",
+    "schema": "public",
+    "table": "part",
+    "columns": [
+      "p_type"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_part_p_type_abe75732\" ON \"public\".\"part\" USING btree (\"p_type\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 56,
+    "name": "qdbo_tpch_idx_public_part_p_partkey_p_size_026246f6",
+    "schema": "public",
+    "table": "part",
+    "columns": [
+      "p_partkey",
+      "p_size"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_part_p_partkey_p_size_026246f6\" ON \"public\".\"part\" USING btree (\"p_partkey\", \"p_size\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 57,
+    "name": "qdbo_tpch_idx_public_part_p_size_p_brand_c6bda2d3",
+    "schema": "public",
+    "table": "part",
+    "columns": [
+      "p_size",
+      "p_brand"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_part_p_size_p_brand_c6bda2d3\" ON \"public\".\"part\" USING btree (\"p_size\", \"p_brand\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 58,
+    "name": "qdbo_tpch_idx_public_part_p_brand_p_container_84761805",
+    "schema": "public",
+    "table": "part",
+    "columns": [
+      "p_brand",
+      "p_container"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_part_p_brand_p_container_84761805\" ON \"public\".\"part\" USING btree (\"p_brand\", \"p_container\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 59,
+    "name": "qdbo_tpch_idx_public_part_p_container_p_type_1c6ff272",
+    "schema": "public",
+    "table": "part",
+    "columns": [
+      "p_container",
+      "p_type"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_part_p_container_p_type_1c6ff272\" ON \"public\".\"part\" USING btree (\"p_container\", \"p_type\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 60,
+    "name": "qdbo_tpch_idx_public_part_p_partkey_p_size_p_brand_5319e492",
+    "schema": "public",
+    "table": "part",
+    "columns": [
+      "p_partkey",
+      "p_size",
+      "p_brand"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_part_p_partkey_p_size_p_brand_5319e492\" ON \"public\".\"part\" USING btree (\"p_partkey\", \"p_size\", \"p_brand\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 61,
+    "name": "qdbo_tpch_idx_public_part_p_size_p_brand_p_container_97ce40e",
+    "schema": "public",
+    "table": "part",
+    "columns": [
+      "p_size",
+      "p_brand",
+      "p_container"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_part_p_size_p_brand_p_container_97ce40e\" ON \"public\".\"part\" USING btree (\"p_size\", \"p_brand\", \"p_container\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 62,
+    "name": "qdbo_tpch_idx_public_part_p_brand_p_container_p_type_766c540",
+    "schema": "public",
+    "table": "part",
+    "columns": [
+      "p_brand",
+      "p_container",
+      "p_type"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_part_p_brand_p_container_p_type_766c540\" ON \"public\".\"part\" USING btree (\"p_brand\", \"p_container\", \"p_type\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 63,
+    "name": "qdbo_tpch_idx_public_supplier_s_suppkey_c605bac0",
+    "schema": "public",
+    "table": "supplier",
+    "columns": [
+      "s_suppkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_supplier_s_suppkey_c605bac0\" ON \"public\".\"supplier\" USING btree (\"s_suppkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 64,
+    "name": "qdbo_tpch_idx_public_supplier_s_nationkey_b07880e0",
+    "schema": "public",
+    "table": "supplier",
+    "columns": [
+      "s_nationkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_supplier_s_nationkey_b07880e0\" ON \"public\".\"supplier\" USING btree (\"s_nationkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 65,
+    "name": "qdbo_tpch_idx_public_supplier_s_comment_ec4fe624",
+    "schema": "public",
+    "table": "supplier",
+    "columns": [
+      "s_comment"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_supplier_s_comment_ec4fe624\" ON \"public\".\"supplier\" USING btree (\"s_comment\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 66,
+    "name": "qdbo_tpch_idx_public_supplier_s_name_876b8ee8",
+    "schema": "public",
+    "table": "supplier",
+    "columns": [
+      "s_name"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_supplier_s_name_876b8ee8\" ON \"public\".\"supplier\" USING btree (\"s_name\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 67,
+    "name": "qdbo_tpch_idx_public_supplier_s_suppkey_s_nationkey_81b228dd",
+    "schema": "public",
+    "table": "supplier",
+    "columns": [
+      "s_suppkey",
+      "s_nationkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_supplier_s_suppkey_s_nationkey_81b228dd\" ON \"public\".\"supplier\" USING btree (\"s_suppkey\", \"s_nationkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 68,
+    "name": "qdbo_tpch_idx_public_supplier_s_nationkey_s_comment_3a3ebfba",
+    "schema": "public",
+    "table": "supplier",
+    "columns": [
+      "s_nationkey",
+      "s_comment"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_supplier_s_nationkey_s_comment_3a3ebfba\" ON \"public\".\"supplier\" USING btree (\"s_nationkey\", \"s_comment\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 69,
+    "name": "qdbo_tpch_idx_public_supplier_s_comment_s_name_949d27db",
+    "schema": "public",
+    "table": "supplier",
+    "columns": [
+      "s_comment",
+      "s_name"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_supplier_s_comment_s_name_949d27db\" ON \"public\".\"supplier\" USING btree (\"s_comment\", \"s_name\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 70,
+    "name": "qdbo_tpch_idx_public_supplier_s_suppkey_s_nationkey_s_commen",
+    "schema": "public",
+    "table": "supplier",
+    "columns": [
+      "s_suppkey",
+      "s_nationkey",
+      "s_comment"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_supplier_s_suppkey_s_nationkey_s_commen\" ON \"public\".\"supplier\" USING btree (\"s_suppkey\", \"s_nationkey\", \"s_comment\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 71,
+    "name": "qdbo_tpch_idx_public_supplier_s_nationkey_s_comment_s_name_c",
+    "schema": "public",
+    "table": "supplier",
+    "columns": [
+      "s_nationkey",
+      "s_comment",
+      "s_name"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_supplier_s_nationkey_s_comment_s_name_c\" ON \"public\".\"supplier\" USING btree (\"s_nationkey\", \"s_comment\", \"s_name\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 72,
+    "name": "qdbo_tpch_idx_public_customer_c_custkey_6347f879",
+    "schema": "public",
+    "table": "customer",
+    "columns": [
+      "c_custkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_customer_c_custkey_6347f879\" ON \"public\".\"customer\" USING btree (\"c_custkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 73,
+    "name": "qdbo_tpch_idx_public_customer_c_nationkey_4e383b90",
+    "schema": "public",
+    "table": "customer",
+    "columns": [
+      "c_nationkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_customer_c_nationkey_4e383b90\" ON \"public\".\"customer\" USING btree (\"c_nationkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 74,
+    "name": "qdbo_tpch_idx_public_customer_c_mktsegment_0a32c5d4",
+    "schema": "public",
+    "table": "customer",
+    "columns": [
+      "c_mktsegment"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_customer_c_mktsegment_0a32c5d4\" ON \"public\".\"customer\" USING btree (\"c_mktsegment\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 75,
+    "name": "qdbo_tpch_idx_public_customer_c_custkey_c_nationkey_e0661462",
+    "schema": "public",
+    "table": "customer",
+    "columns": [
+      "c_custkey",
+      "c_nationkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_customer_c_custkey_c_nationkey_e0661462\" ON \"public\".\"customer\" USING btree (\"c_custkey\", \"c_nationkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 76,
+    "name": "qdbo_tpch_idx_public_customer_c_nationkey_c_mktsegment_d7aa3",
+    "schema": "public",
+    "table": "customer",
+    "columns": [
+      "c_nationkey",
+      "c_mktsegment"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_customer_c_nationkey_c_mktsegment_d7aa3\" ON \"public\".\"customer\" USING btree (\"c_nationkey\", \"c_mktsegment\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 77,
+    "name": "qdbo_tpch_idx_public_customer_c_custkey_c_nationkey_c_mktseg",
+    "schema": "public",
+    "table": "customer",
+    "columns": [
+      "c_custkey",
+      "c_nationkey",
+      "c_mktsegment"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_customer_c_custkey_c_nationkey_c_mktseg\" ON \"public\".\"customer\" USING btree (\"c_custkey\", \"c_nationkey\", \"c_mktsegment\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 78,
+    "name": "qdbo_tpch_idx_public_nation_n_nationkey_e5218a0a",
+    "schema": "public",
+    "table": "nation",
+    "columns": [
+      "n_nationkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_nation_n_nationkey_e5218a0a\" ON \"public\".\"nation\" USING btree (\"n_nationkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 79,
+    "name": "qdbo_tpch_idx_public_nation_n_name_69a51674",
+    "schema": "public",
+    "table": "nation",
+    "columns": [
+      "n_name"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_nation_n_name_69a51674\" ON \"public\".\"nation\" USING btree (\"n_name\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 80,
+    "name": "qdbo_tpch_idx_public_nation_n_regionkey_a872381e",
+    "schema": "public",
+    "table": "nation",
+    "columns": [
+      "n_regionkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_nation_n_regionkey_a872381e\" ON \"public\".\"nation\" USING btree (\"n_regionkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 81,
+    "name": "qdbo_tpch_idx_public_nation_n_nationkey_n_name_ab5658e0",
+    "schema": "public",
+    "table": "nation",
+    "columns": [
+      "n_nationkey",
+      "n_name"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_nation_n_nationkey_n_name_ab5658e0\" ON \"public\".\"nation\" USING btree (\"n_nationkey\", \"n_name\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 82,
+    "name": "qdbo_tpch_idx_public_nation_n_name_n_regionkey_8cfff028",
+    "schema": "public",
+    "table": "nation",
+    "columns": [
+      "n_name",
+      "n_regionkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_nation_n_name_n_regionkey_8cfff028\" ON \"public\".\"nation\" USING btree (\"n_name\", \"n_regionkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 83,
+    "name": "qdbo_tpch_idx_public_nation_n_nationkey_n_name_n_regionkey_4",
+    "schema": "public",
+    "table": "nation",
+    "columns": [
+      "n_nationkey",
+      "n_name",
+      "n_regionkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_nation_n_nationkey_n_name_n_regionkey_4\" ON \"public\".\"nation\" USING btree (\"n_nationkey\", \"n_name\", \"n_regionkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "three-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 84,
+    "name": "qdbo_tpch_idx_public_partsupp_ps_suppkey_a41b1e96",
+    "schema": "public",
+    "table": "partsupp",
+    "columns": [
+      "ps_suppkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_partsupp_ps_suppkey_a41b1e96\" ON \"public\".\"partsupp\" USING btree (\"ps_suppkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 85,
+    "name": "qdbo_tpch_idx_public_partsupp_ps_partkey_c7a9bf4d",
+    "schema": "public",
+    "table": "partsupp",
+    "columns": [
+      "ps_partkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_partsupp_ps_partkey_c7a9bf4d\" ON \"public\".\"partsupp\" USING btree (\"ps_partkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 86,
+    "name": "qdbo_tpch_idx_public_partsupp_ps_suppkey_ps_partkey_57feb1e2",
+    "schema": "public",
+    "table": "partsupp",
+    "columns": [
+      "ps_suppkey",
+      "ps_partkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_partsupp_ps_suppkey_ps_partkey_57feb1e2\" ON \"public\".\"partsupp\" USING btree (\"ps_suppkey\", \"ps_partkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 87,
+    "name": "qdbo_tpch_idx_public_region_r_name_676bcfa3",
+    "schema": "public",
+    "table": "region",
+    "columns": [
+      "r_name"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_region_r_name_676bcfa3\" ON \"public\".\"region\" USING btree (\"r_name\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 88,
+    "name": "qdbo_tpch_idx_public_region_r_regionkey_a5304b66",
+    "schema": "public",
+    "table": "region",
+    "columns": [
+      "r_regionkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_region_r_regionkey_a5304b66\" ON \"public\".\"region\" USING btree (\"r_regionkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "column seen in workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 89,
+    "name": "qdbo_tpch_idx_public_region_r_name_r_regionkey_094bac3d",
+    "schema": "public",
+    "table": "region",
+    "columns": [
+      "r_name",
+      "r_regionkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_region_r_name_r_regionkey_094bac3d\" ON \"public\".\"region\" USING btree (\"r_name\", \"r_regionkey\")",
+    "hypopg_ddl": null,
+    "method": "btree",
+    "source": "auto",
+    "reason": "two-column candidate from workload",
+    "metadata": {}
+  },
+  {
+    "candidate_id": 90,
+    "name": "qdbo_tpch_idx_public_partsupp_ps_partkey_ps_suppkey_8f0bb7c2",
+    "schema": "public",
+    "table": "partsupp",
+    "columns": [
+      "ps_partkey",
+      "ps_suppkey"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_partsupp_ps_partkey_ps_suppkey_8f0bb7c2\" ON \"public\".\"partsupp\" USING btree (\"ps_partkey\", \"ps_suppkey\")",
+    "hypopg_ddl": null,
+    "origin": "pk_augment"
+  },
+  {
+    "candidate_id": 91,
+    "name": "qdbo_tpch_idx_public_lineitem_l_orderkey_l_linenumber_c87749c0",
+    "schema": "public",
+    "table": "lineitem",
+    "columns": [
+      "l_orderkey",
+      "l_linenumber"
+    ],
+    "ddl": "CREATE INDEX \"qdbo_tpch_idx_public_lineitem_l_orderkey_l_linenumber_c87749c0\" ON \"public\".\"lineitem\" USING btree (\"l_orderkey\", \"l_linenumber\")",
+    "hypopg_ddl": null,
+    "origin": "pk_augment"
+  }
+]

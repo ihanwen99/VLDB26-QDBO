@@ -1,0 +1,10 @@
+dwave-ocean-sdk>=8.0
+dimod>=0.12
+numpy>=1.24
+pytz>=2024.1
+psycopg2-binary>=2.9
+sqlglot>=20.0
+sqlparse>=0.5
+PyYAML>=6.0
+docplex>=2.25
+qiskit-optimization>=0.6

@@ -1,0 +1,3 @@
+Q5 run1: 1841ms ok
+Q5 run2: 1833ms ok
+Q5 run3: 1840ms ok

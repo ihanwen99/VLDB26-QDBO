@@ -1,0 +1,3 @@
+Q11 run1: 526ms ok
+Q11 run2: 517ms ok
+Q11 run3: 527ms ok

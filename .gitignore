@@ -1,0 +1,15 @@
+.idea/
+.DS_Store
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+*.log
+build/
+dist/
+
+# Local configuration and generated outputs.
+config.env
+results/
+persistent_custom_embedding/
+qdbo/embedding/cpp_embed_lib.so

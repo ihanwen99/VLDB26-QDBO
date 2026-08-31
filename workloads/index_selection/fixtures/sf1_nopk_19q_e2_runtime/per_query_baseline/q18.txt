@@ -1,0 +1,3 @@
+Q18 run1: 5679ms ok
+Q18 run2: 5696ms ok
+Q18 run3: 5690ms ok

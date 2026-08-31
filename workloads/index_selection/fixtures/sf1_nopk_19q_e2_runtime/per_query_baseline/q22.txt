@@ -1,0 +1,3 @@
+Q22 run1: 895ms ok
+Q22 run2: 889ms ok
+Q22 run3: 870ms ok
