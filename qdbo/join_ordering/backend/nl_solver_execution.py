@@ -38,7 +38,6 @@ def nl_query_optimization(
             else:
                 adjusted_selectivity = selectivities[left_rid][right_rid]
             current_selectivity *= adjusted_selectivity
-            # current_selectivity *= selectivities[left_rid][right_rid]
         intermediate_cardinality = intermediate_cardinality * cardinalities[right_rid] * current_selectivity
         total_cost += intermediate_cardinality
 

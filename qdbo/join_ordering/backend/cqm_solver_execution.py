@@ -99,7 +99,6 @@ def build_cqm(cardinalities_content, selectivities_content) -> dimod.Constrained
     for r in relations:
         for j in range(1, num_joins):
             # This constraint ensures that if a relation is used in step j, it must continue to be used in step j+1.
-            # cqm.add_constraint(roj_vars[(r, j)] <= roj_vars[(r, j + 1)], label=f'cont_use_{r}_{j}')
             cqm.add_constraint(roj_vars[(r, j)] - roj_vars[(r, j + 1)] <= 0, label=f'cont_use_{r}_{j}')
 
     # Constraint 2 for incremental increase of operands
