@@ -123,7 +123,7 @@ def read_out(sample, card, pred, pred_sel, card_dict):
     return raw_solution if raw_cost < connected_cost else connected_solution
 
 
-def actual_query_blackbox(
+def solve_join_ordering_query(
     full_problem_path,
     custom_embedding: str,
     verbose: bool = False,
@@ -192,7 +192,7 @@ def actual_query_blackbox(
         "TOTAL",
     ]
     summary = {
-        "__tag__": "actual_query_blackbox_summary",
+        "__tag__": "solve_join_ordering_query_summary",
         "timings_s": {key: timings[key] for key in ordered_keys},
     }
     if isinstance(timing_metrics, list):

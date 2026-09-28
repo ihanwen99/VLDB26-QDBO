@@ -320,7 +320,7 @@ def iterative_qa_solve(
         save_embedding_json(
             base_dir=str(DEFAULT_EMBEDDING_DIR / GLOBAL_TIME),
             custom_embedding=custom_embedding,
-            function_name="actual_query_blackbox",
+            function_name="solve_join_ordering_query",
             query_id=query_id,
             run_id=run_id,
             orig_bqm=orig_bqm,

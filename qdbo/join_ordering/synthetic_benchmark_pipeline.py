@@ -63,9 +63,9 @@ SILENCE_BQM_OUTPUT = True  # suppress noisy prints inside BQM build/solve/read_o
 # ---- iterative solver configs ----
 ITER_TIMEOUT_S = 3600
 try:
-    from qdbo.join_ordering.helpers import actual_query_blackbox
+    from qdbo.join_ordering.helpers import solve_join_ordering_query
 except Exception as e:
-    print(f"[FATAL] cannot import actual_query_blackbox: {e}")
+    print(f"[FATAL] cannot import solve_join_ordering_query: {e}")
     RUN_ITER = False
 
 CUSTOM_EMBEDDINGS = [
@@ -250,16 +250,16 @@ def find_instance_folders(base_dir: str, only_instance_id: Optional[int] = None)
     return filtered
 
 
-def run_blackbox_with_timeout(
+def run_solve_with_timeout(
         full_problem_path: str,
         emb: Any,
         iterations: Optional[int],
         timeout_s: int,
 ) -> Tuple[Any, Any, Optional[float], Any]:
     """
-    Run actual_query_blackbox in a separate Python process with a hard timeout.
-    Returns (join_order, db_cost, blackbox_time_s, timing_information).
-    Raises TimeoutError on timeout, RuntimeError on blackbox failure.
+    Run solve_join_ordering_query in a separate Python process with a hard timeout.
+    Returns (join_order, db_cost, solve_time_s, timing_information).
+    Raises TimeoutError on timeout, RuntimeError on solve failure.
     """
     env = os.environ.copy()
     env["QDBO_FULL_PROBLEM_PATH"] = str(full_problem_path)
@@ -272,7 +272,7 @@ def run_blackbox_with_timeout(
         r"""
 import json, os, time
 
-from qdbo.join_ordering.helpers import actual_query_blackbox
+from qdbo.join_ordering.helpers import solve_join_ordering_query
 
 full_problem_path = os.environ["QDBO_FULL_PROBLEM_PATH"]
 emb = os.environ["QDBO_CUSTOM_EMB"]
@@ -280,14 +280,14 @@ iters_raw = os.environ.get("QDBO_ITERATIONS", "")
 iterations = None if iters_raw == "" else int(iters_raw)
 
 t0 = time.time()
-join_order, db_cost, timing = actual_query_blackbox(
+join_order, db_cost, timing = solve_join_ordering_query(
     full_problem_path,
     emb,
     verbose=False,
     iterations=iterations,
 )
 t1 = time.time()
-blackbox_time_s = t1 - t0
+solve_time_s = t1 - t0
 
 if hasattr(join_order, "tolist"):
     join_order = join_order.tolist()
@@ -296,7 +296,7 @@ print(timing)
 print(json.dumps({
     "join_order": join_order,
     "db_cost": db_cost,
-    "blackbox_time_s": blackbox_time_s,
+    "solve_time_s": solve_time_s,
     "timing_information": timing,
 }, ensure_ascii=True, default=str))
 """.strip(),
@@ -311,27 +311,27 @@ print(json.dumps({
             timeout=timeout_s,
         )
     except subprocess.TimeoutExpired as e:
-        raise TimeoutError(f"actual_query_blackbox timeout after {timeout_s}s") from e
+        raise TimeoutError(f"solve_join_ordering_query timeout after {timeout_s}s") from e
 
     if proc.returncode != 0:
         raise RuntimeError(
-            f"actual_query_blackbox failed (rc={proc.returncode}): {proc.stderr.strip()}"
+            f"solve_join_ordering_query failed (rc={proc.returncode}): {proc.stderr.strip()}"
         )
 
     out_lines = [ln for ln in proc.stdout.splitlines() if ln.strip()]
     if not out_lines:
-        raise RuntimeError("actual_query_blackbox produced no stdout")
+        raise RuntimeError("solve_join_ordering_query produced no stdout")
 
     try:
         payload = json.loads(out_lines[-1])
         return (
             payload["join_order"],
             payload["db_cost"],
-            payload.get("blackbox_time_s"),
+            payload.get("solve_time_s"),
             payload.get("timing_information"),
         )
     except Exception as e:
-        raise RuntimeError(f"cannot parse blackbox output as json. stdout={proc.stdout!r}") from e
+        raise RuntimeError(f"cannot parse solve output as json. stdout={proc.stdout!r}") from e
 
 
 def _make_base_row(
@@ -641,7 +641,7 @@ def run_synthetic_cost() -> Tuple[Optional[str], Optional[str], Optional[str], O
 
                             try:
                                 t0 = time.time()
-                                join_order_raw, db_cost, blackbox_time_s, timing_information = run_blackbox_with_timeout(
+                                join_order_raw, db_cost, solve_time_s, timing_information = run_solve_with_timeout(
                                     full_problem_path=full_problem_path,
                                     emb=emb,
                                     iterations=iters,
@@ -649,8 +649,8 @@ def run_synthetic_cost() -> Tuple[Optional[str], Optional[str], Optional[str], O
                                 )
                                 t1 = time.time()
 
-                                # wall_time_s: end-to-end blackbox call time (subprocess + python overhead)
-                                # blackbox_time_s: internal timing reported by actual_query_blackbox
+                                # wall_time_s: end-to-end solve call time (subprocess + python overhead)
+                                # solve_time_s: internal timing reported by solve_join_ordering_query
 
                                 wall_time_s = t1 - t0
                                 wall_time_ms = wall_time_s * 1000.0
@@ -710,7 +710,7 @@ def run_synthetic_cost() -> Tuple[Optional[str], Optional[str], Optional[str], O
                                     "join_order": _join_order_to_str(join_order),
                                 })
 
-                                blackbox_s_fmt = f"{blackbox_time_s:.3f}" if blackbox_time_s is not None else "None"
+                                solve_s_fmt = f"{solve_time_s:.3f}" if solve_time_s is not None else "None"
                                 total_overhead_fmt = (
                                     f"{total_overhead_ms / 1000.0:.3f}s"
                                     if total_overhead_ms is not None else "None"
@@ -734,7 +734,7 @@ def run_synthetic_cost() -> Tuple[Optional[str], Optional[str], Optional[str], O
                                     f"pre_overhead={pre_overhead_fmt} "
                                     f"sum_iter={sum_iter_ms_fmt} "
                                     f"iter_list={iter_list_fmt} "
-                                    f"walltime_overhead={wall_time_s:.3f}s blackbox_s={blackbox_s_fmt} db_cost={db_cost}"
+                                    f"walltime_overhead={wall_time_s:.3f}s solve_s={solve_s_fmt} db_cost={db_cost}"
                                 )
                                 if embedding_stats_json is not None:
                                     print(f"[ITER][STATS] {embedding_stats_json}")
