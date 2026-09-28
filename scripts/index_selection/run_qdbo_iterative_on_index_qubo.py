@@ -62,7 +62,7 @@ def _timing_summary(metrics: Any) -> Dict[str, Any]:
     ]
     summary_entries = [
         item for item in metrics
-        if isinstance(item, dict) and item.get("__tag__") == "SEBREMforBQM_summary"
+        if isinstance(item, dict) and item.get("__tag__") == "iterative_qa_solve_summary"
     ]
     return {
         "iteration_latencies_ms": [float(item["latency_total_measured_ms"]) for item in iter_entries],
@@ -103,7 +103,7 @@ def main() -> int:
     sys.path.insert(0, str(qdbo_root))
 
     import dimod
-    from qdbo.core.iterative_solver import SEBREMforBQM
+    from qdbo.core.iterative_solver import iterative_qa_solve
 
     problem_path = Path(args.problem)
     qubo_path = Path(args.qubo)
@@ -139,7 +139,7 @@ def main() -> int:
     semantic_query_meta = {"index_split": index_split, "split_meta": split_meta}
 
     def _query_meta_for(strategy: str) -> Optional[Dict[str, Any]]:
-        """Return query_meta needed by SEBREMforBQM for the given strategy.
+        """Return query_meta needed by iterative_qa_solve for the given strategy.
 
         Semantic strategies require a split; non-semantic strategies do not.
         """
@@ -150,11 +150,11 @@ def main() -> int:
     iteration_list = sorted(int(part.strip()) for part in args.iterations.split(",") if part.strip())
     max_iterations = max(iteration_list)
 
-    # Run SEBREMforBQM once with max iterations; extract intermediate bests
+    # Run iterative_qa_solve once with max iterations; extract intermediate bests
     # from best_sample_so_far_history to avoid redundant QPU calls.
     start = time.time()
     try:
-        rel_ent, samples, best_hist, best_sample, best_obj, num_calls, metrics = SEBREMforBQM(
+        rel_ent, samples, best_hist, best_sample, best_obj, num_calls, metrics = iterative_qa_solve(
             bqm.copy(),
             None,
             args.beta,
@@ -185,7 +185,7 @@ def main() -> int:
     if metrics is not None:
         wall = time.time() - start
         # Extract best_sample_so_far_history from the summary entry in metrics
-        summary_entry = next((m for m in metrics if isinstance(m, dict) and m.get("__tag__") == "SEBREMforBQM_summary"), None)
+        summary_entry = next((m for m in metrics if isinstance(m, dict) and m.get("__tag__") == "iterative_qa_solve_summary"), None)
         best_so_far_history = summary_entry.get("best_sample_so_far_history", []) if summary_entry else []
 
         for iterations in iteration_list:
@@ -229,7 +229,7 @@ def main() -> int:
         "problem": str(problem_path),
         "qubo": str(qubo_path),
         "qdbo_root": str(qdbo_root),
-        "solver": "VLDB26-QDBO SEBREMforBQM over DWaveSampler QPU",
+        "solver": "VLDB26-QDBO iterative_qa_solve over DWaveSampler QPU",
         "reference_solution": reference,
         "rows": rows,
     }

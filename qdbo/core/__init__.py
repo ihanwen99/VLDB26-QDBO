@@ -1,5 +1,5 @@
 """Shared iterative QDBO solver."""
 
-from .iterative_solver import SEBREMforBQM
+from .iterative_solver import iterative_qa_solve
 
-__all__ = ["SEBREMforBQM"]
+__all__ = ["iterative_qa_solve"]

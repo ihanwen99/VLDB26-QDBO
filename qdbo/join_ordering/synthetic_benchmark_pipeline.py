@@ -673,7 +673,7 @@ def run_synthetic_cost() -> Tuple[Optional[str], Optional[str], Optional[str], O
                                         iter_total_ms_sum = float(sum(iter_total_ms_list))
                                     summary_entries = [
                                         d for d in timing_information
-                                        if isinstance(d, dict) and d.get("__tag__") == "SEBREMforBQM_summary"
+                                        if isinstance(d, dict) and d.get("__tag__") == "iterative_qa_solve_summary"
                                     ]
                                     if summary_entries:
                                         summary = summary_entries[-1]

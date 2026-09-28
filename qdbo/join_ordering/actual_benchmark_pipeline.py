@@ -511,7 +511,7 @@ def run_actual_cost(
         "in_pipeline_make_query_id_ms",
         "in_pipeline_get_join_ordering_problem_ms",
         "in_pipeline_generate_Fujitsu_QUBO_for_left_deep_trees_ms",
-        "in_pipeline_SEBREMforBQM_ms",
+        "in_pipeline_iterative_qa_solve_ms",
         "in_pipeline_read_out_ms",
         "in_pipeline_TOTAL_ms",
         "total_overhead_ms",
@@ -791,7 +791,7 @@ def run_actual_cost(
                                         "in_pipeline_make_query_id_ms": None,
                                         "in_pipeline_get_join_ordering_problem_ms": None,
                                         "in_pipeline_generate_Fujitsu_QUBO_for_left_deep_trees_ms": None,
-                                        "in_pipeline_SEBREMforBQM_ms": None,
+                                        "in_pipeline_iterative_qa_solve_ms": None,
                                         "in_pipeline_read_out_ms": None,
                                         "in_pipeline_TOTAL_ms": None,
                                     }
@@ -805,7 +805,7 @@ def run_actual_cost(
                                             iter_total_ms_sum = float(sum(iter_total_ms_list))
                                         summary_entries = [
                                             d for d in timing_information
-                                            if isinstance(d, dict) and d.get("__tag__") == "SEBREMforBQM_summary"
+                                            if isinstance(d, dict) and d.get("__tag__") == "iterative_qa_solve_summary"
                                         ]
                                         if summary_entries:
                                             summary = summary_entries[-1]
@@ -837,8 +837,8 @@ def run_actual_cost(
                                                     in_pipeline_timing_ms["in_pipeline_get_join_ordering_problem_ms"] = float(timings_s["get_join_ordering_problem"]) * 1000.0
                                                 if timings_s.get("generate_Fujitsu_QUBO_for_left_deep_trees") is not None:
                                                     in_pipeline_timing_ms["in_pipeline_generate_Fujitsu_QUBO_for_left_deep_trees_ms"] = float(timings_s["generate_Fujitsu_QUBO_for_left_deep_trees"]) * 1000.0
-                                                if timings_s.get("SEBREMforBQM") is not None:
-                                                    in_pipeline_timing_ms["in_pipeline_SEBREMforBQM_ms"] = float(timings_s["SEBREMforBQM"]) * 1000.0
+                                                if timings_s.get("iterative_qa_solve") is not None:
+                                                    in_pipeline_timing_ms["in_pipeline_iterative_qa_solve_ms"] = float(timings_s["iterative_qa_solve"]) * 1000.0
                                                 if timings_s.get("read_out") is not None:
                                                     in_pipeline_timing_ms["in_pipeline_read_out_ms"] = float(timings_s["read_out"]) * 1000.0
                                                 if timings_s.get("TOTAL") is not None:
@@ -854,8 +854,8 @@ def run_actual_cost(
                                                     in_pipeline_timing_ms["in_pipeline_get_join_ordering_problem_ms"] = float(timings_s["get_join_ordering_problem"]) * 1000.0
                                                 if timings_s.get("generate_Fujitsu_QUBO_for_left_deep_trees") is not None:
                                                     in_pipeline_timing_ms["in_pipeline_generate_Fujitsu_QUBO_for_left_deep_trees_ms"] = float(timings_s["generate_Fujitsu_QUBO_for_left_deep_trees"]) * 1000.0
-                                                if timings_s.get("SEBREMforBQM") is not None:
-                                                    in_pipeline_timing_ms["in_pipeline_SEBREMforBQM_ms"] = float(timings_s["SEBREMforBQM"]) * 1000.0
+                                                if timings_s.get("iterative_qa_solve") is not None:
+                                                    in_pipeline_timing_ms["in_pipeline_iterative_qa_solve_ms"] = float(timings_s["iterative_qa_solve"]) * 1000.0
                                                 if timings_s.get("read_out") is not None:
                                                     in_pipeline_timing_ms["in_pipeline_read_out_ms"] = float(timings_s["read_out"]) * 1000.0
                                                 if timings_s.get("TOTAL") is not None:
@@ -893,7 +893,7 @@ def run_actual_cost(
                                         "in_pipeline_make_query_id_ms": in_pipeline_timing_ms["in_pipeline_make_query_id_ms"],
                                         "in_pipeline_get_join_ordering_problem_ms": in_pipeline_timing_ms["in_pipeline_get_join_ordering_problem_ms"],
                                         "in_pipeline_generate_Fujitsu_QUBO_for_left_deep_trees_ms": in_pipeline_timing_ms["in_pipeline_generate_Fujitsu_QUBO_for_left_deep_trees_ms"],
-                                        "in_pipeline_SEBREMforBQM_ms": in_pipeline_timing_ms["in_pipeline_SEBREMforBQM_ms"],
+                                        "in_pipeline_iterative_qa_solve_ms": in_pipeline_timing_ms["in_pipeline_iterative_qa_solve_ms"],
                                         "in_pipeline_read_out_ms": in_pipeline_timing_ms["in_pipeline_read_out_ms"],
                                         "in_pipeline_TOTAL_ms": in_pipeline_timing_ms["in_pipeline_TOTAL_ms"],
                                         "inner_faithful_total_overhead_ms": inner_faithful_total_overhead_ms,

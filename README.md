@@ -29,7 +29,7 @@ source config.env
 Verify the local installation without a database or QPU call:
 
 ```bash
-python -c 'import qdbo; from qdbo.core import SEBREMforBQM; print(qdbo.__version__)'
+python -c 'import qdbo; from qdbo.core import iterative_qa_solve; print(qdbo.__version__)'
 qdbo doctor
 python -m qdbo.join_ordering.actual_benchmark_pipeline --help
 ```

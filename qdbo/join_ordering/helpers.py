@@ -8,7 +8,7 @@ from typing import Optional
 
 import numpy as np
 
-from qdbo.core.iterative_solver import SEBREMforBQM
+from qdbo.core.iterative_solver import iterative_qa_solve
 from qdbo.backend.utils import make_query_id
 from qdbo.join_ordering.backend.ProblemGenerator import (
     generate_Fujitsu_QUBO_for_left_deep_trees,
@@ -161,7 +161,7 @@ def actual_query_blackbox(
         best_objective,
         number_of_calls,
         timing_metrics,
-    ) = SEBREMforBQM(
+    ) = iterative_qa_solve(
         bqm,
         partial_objective=None,
         beta=1.0,
@@ -174,7 +174,7 @@ def actual_query_blackbox(
         query_meta={"card": card, "pred_sel": pred_sel},
         verbose=verbose,
     )
-    mark("SEBREMforBQM", started)
+    mark("iterative_qa_solve", started)
 
     started = time.perf_counter()
     join_order, database_cost, _used_fallback = read_out(
@@ -187,7 +187,7 @@ def actual_query_blackbox(
         "make_query_id",
         "get_join_ordering_problem",
         "generate_Fujitsu_QUBO_for_left_deep_trees",
-        "SEBREMforBQM",
+        "iterative_qa_solve",
         "read_out",
         "TOTAL",
     ]

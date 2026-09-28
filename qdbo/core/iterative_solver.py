@@ -231,11 +231,11 @@ def update_ising_model_embedded(
 
 
 # ---------------------------
-# Main SEBREM Function
+# Main iterative quantum-annealer solve
 # ---------------------------
 
 
-def SEBREMforBQM(
+def iterative_qa_solve(
     bqm,
     partial_objective,
     beta,
@@ -248,7 +248,7 @@ def SEBREMforBQM(
     query_meta: Optional[dict] = None,
     verbose: bool = False,
 ):
-    """Core SEBREM loop working directly on a BQM."""
+    """Iterative quantum-annealer solve (embed, sample, relaxation-correct) working directly on a BQM."""
     if n_iterations < 1:
         raise ValueError("n_iterations must be at least 1")
 
@@ -513,14 +513,14 @@ def SEBREMforBQM(
 
         total_ms = _ms(_now() - t_total0)
         summary = {
-            "__tag__": "SEBREMforBQM_summary",
+            "__tag__": "iterative_qa_solve_summary",
             "query_id": query_id,
             "custom_embedding": custom_embedding,
             "n_iterations_requested": int(n_iterations),
             "n_iterations_executed": int(number_of_calls),
             "overall_latency_ms": overall_latency_ms,
             "per_iter_latency_sum_ms": per_iter_latency_sum_ms,
-            "SEBREM_total_ms": total_ms,
+            "total_ms": total_ms,
             "mapping_time_s": float(mapping_time_s),
             "embedding_stats": stats,
             "var_order": [str(v) for v in var_order],
