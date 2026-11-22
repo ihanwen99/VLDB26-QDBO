@@ -1,0 +1,12 @@
+.idea/
+.DS_Store
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.log
+build/
+dist/
+
+# Local configuration and generated outputs.
+results/
+qdbo/embedding/cpp_embed_lib.so

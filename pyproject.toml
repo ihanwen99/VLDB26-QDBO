@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qdbo"
+version = "0.1.0"
+description = "QDBO: A Real-time Quantum-augmented Database System Optimizer"
+readme = "README.md"
+license = {text = "GPL-3.0-or-later"}
+authors = [
+  {name = "Hanwen Liu"},
+  {name = "Abhishek Kumar"},
+  {name = "Federico Spedalieri"},
+  {name = "Ibrahim Sabek"},
+]
+requires-python = ">=3.10"
+classifiers = [
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Science/Research",
+  "Topic :: Database",
+]
+dependencies = [
+  "dwave-ocean-sdk",
+  "dwave-optimization==0.6.1",
+  "dimod",
+  "numpy",
+  "psycopg2-binary",
+  "sqlparse",
+  "docplex",
+  "qiskit-optimization",
+]
+
+[project.urls]
+Repository = "https://github.com/ihanwen99/VLDB26-QDBO"
+Paper = "https://doi.org/10.14778/3836663.3836712"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["qdbo*"]
+
+[tool.setuptools.package-data]
+"qdbo.embedding" = ["build_cpp_embed.sh", "cpp_embed.cpp"]

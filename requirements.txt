@@ -1,0 +1,8 @@
+dwave-ocean-sdk
+dwave-optimization==0.6.1
+dimod
+numpy
+psycopg2-binary
+sqlparse
+docplex
+qiskit-optimization
